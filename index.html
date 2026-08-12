@@ -17,7 +17,7 @@
       </span>
     </div>
     <nav>
-      <img src="logo.jpg" alt="Logo sombre éclair">
+      <img src="logo.jpg" alt="Logo sombre éclair" class="logo">
       <div class="brand">
         (sombre éclair)
         <small>ÉLECTRICITÉ GÉNÉRALE</small>
@@ -80,32 +80,32 @@
     <section id="realisations">
       <h2>Réalisations</h2>
       <p class="intro">Quelques exemples de mes interventions</p>
-      <div class="gallery">
+      <div class="gallery" aria-live="polite">
         <figure>
-          <picture>
-            <img src="piscine.png" alt="Piscine éclairée la nuit avec muret en pierre et éclairage au sol" width="1200" height="800" loading="lazy">
-          </picture>
+          <a href="piscine.png" class="lightbox-link" data-caption="Éclairage extérieur et branchement piscine — projet réalisé">
+            <img src="piscine.png" alt="Piscine éclairée la nuit avec muret en pierre et éclairage au sol" loading="lazy">
+          </a>
           <figcaption>Éclairage extérieur et branchement piscine — projet réalisé</figcaption>
         </figure>
 
         <figure>
-          <picture>
-            <img src="cuisine.jpg" alt="Cuisine blanche moderne avec plan bar et suspensions à ampoules" width="1200" height="800" loading="lazy">
-          </picture>
+          <a href="cuisine.jpg" class="lightbox-link" data-caption="Installation cuisine équipée">
+            <img src="cuisine.jpg" alt="Cuisine blanche moderne avec plan bar et suspensions à ampoules" loading="lazy">
+          </a>
           <figcaption>Installation cuisine équipée</figcaption>
         </figure>
 
         <figure>
-          <picture>
-            <img src="salon.png" alt="Pièce voûtée en pierre avec éclairage encastré et bande LED" width="1200" height="800" loading="lazy">
-          </picture>
+          <a href="salon.png" class="lightbox-link" data-caption="Rénovation d'une cave voûtée — éclairage intégré">
+            <img src="salon.png" alt="Pièce voûtée en pierre avec éclairage encastré et bande LED" loading="lazy">
+          </a>
           <figcaption>Rénovation d'une cave voûtée — éclairage intégré</figcaption>
         </figure>
 
         <figure>
-          <picture>
-            <img src="agrandissement.jpg" alt="Pièce avec grandes baies vitrées et sol carrelé à motifs" width="1200" height="800" loading="lazy">
-          </picture>
+          <a href="agrandissement.jpg" class="lightbox-link" data-caption="Agrandissement / espace lumineux avec grandes fenêtres">
+            <img src="agrandissement.jpg" alt="Pièce avec grandes baies vitrées et sol carrelé à motifs" loading="lazy">
+          </a>
           <figcaption>Agrandissement / espace lumineux avec grandes fenêtres</figcaption>
         </figure>
       </div>
@@ -125,5 +125,16 @@
     <b>(sombre éclair)</b> — Régis Gineste · Électricité générale<br>
     <small>Mentions légales : SIRET et adresse professionnelle à compléter avant publication.</small>
   </footer>
+
+  <!-- Lightbox modal -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Aperçu de l'image">
+    <button class="lightbox-close" aria-label="Fermer">×</button>
+    <div class="lightbox-content">
+      <img src="" alt="" class="lightbox-img">
+      <p class="lightbox-caption"></p>
+    </div>
+  </div>
+
+  <script src="gallery.js" defer></script>
 </body>
 </html>
